@@ -1,0 +1,11 @@
+--- a/Makefile
++++ b/Makefile
+@@ -292,7 +292,7 @@
+ 
+ KERNELVERSION	= $(CORE).$(MAJOR).$(MINOR)
+ 
+-FMAP_LINKOPT	?= -lfmap-0.3
++FMAP_LINKOPT	?= $(shell pkg-config --libs fmap)
+ LDLIBS		:= -luuid $(FMAP_LINKOPT)
+ 
+ #EXTRA_CFLAGS	:= $(patsubst %,-l%, $(LIBRARIES))
