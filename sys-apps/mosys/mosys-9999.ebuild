@@ -16,10 +16,12 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
 
-DEPEND="sys-libs/flashmap"
+RDEPEND="sys-libs/flashmap"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 PATCHES=("${FILESDIR}/${PN}-musl.patch"
-	"${FILESDIR}/${PN}-fmap.patch")
+	"${FILESDIR}/${PN}-pkgconfig.patch")
 
 src_configure() {
 	emake ARCH=$(tc-arch) defconfig

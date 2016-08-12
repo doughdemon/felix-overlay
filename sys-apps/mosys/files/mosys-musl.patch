@@ -1,8 +1,13 @@
 diff --git a/lib/eeprom/ethtool-util.h b/lib/eeprom/ethtool-util.h
-index 3fe47e3..e7b4cd0 100644
+index 3fe47e3..8e6f463 100644
 --- a/lib/eeprom/ethtool-util.h
 +++ b/lib/eeprom/ethtool-util.h
-@@ -26,15 +26,15 @@
+@@ -22,19 +22,19 @@
+ #ifndef ETHTOOL_UTIL_H__
+ #define ETHTOOL_UTIL_H__
+ 
+-#include <sys/types.h>
++#include <stdint.h>
  
  /* hack, so we may include kernel's ethtool.h */
  typedef unsigned long long __u64;
