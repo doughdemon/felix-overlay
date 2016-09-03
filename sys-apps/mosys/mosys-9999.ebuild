@@ -20,9 +20,6 @@ RDEPEND="sys-libs/flashmap"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-PATCHES=("${FILESDIR}/${PN}-musl.patch"
-	"${FILESDIR}/${PN}-pkgconfig.patch")
-
 src_configure() {
 	emake ARCH=$(tc-arch) defconfig
 }
